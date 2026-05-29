@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #0d0d1a;
+  color: #e0e0ff;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Shimmer animation for photo skeleton loaders */
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Subtle lift on hover for cards */
+div[style*="border-radius: 12px"]:hover,
+div[style*="border-radius: 10px"]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5) !important;
+}
