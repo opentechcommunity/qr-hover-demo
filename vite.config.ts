@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 // base must match the GitHub repo name so asset paths resolve correctly on Pages
 export default defineConfig({
   plugins: [react()],
-  base: '/qr-hover-link/',   // change this if your repo is named differently
+  base: '/qr-hover-demo/',
 })
