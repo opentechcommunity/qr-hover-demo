@@ -1,73 +1,53 @@
-# React + TypeScript + Vite
+# qr-hover-link — Demo site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Interactive documentation and live demo for the [`qr-hover-link`](https://www.npmjs.com/package/qr-hover-link) React component.
 
-Currently, two official plugins are available:
+**[→ Live site](https://opentechcommunity.github.io/qr-hover-demo/)** · [npm package](https://www.npmjs.com/package/qr-hover-link) · [Package source](https://github.com/opentechcommunity/qr-hover-link)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## What this is
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This repo contains the demo and documentation site for `qr-hover-link` — a React component that wraps a QR code image and shows a clickable overlay link on hover, so desktop users never need to reach for their phone.
 
-## Expanding the ESLint configuration
+The site is built with [Vite](https://vitejs.dev) + [React](https://react.dev) + TypeScript and hosted on GitHub Pages.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Pages on the site
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+| Section | Description |
+|---|---|
+| About | What the package does and why |
+| Installation | npm / yarn install commands |
+| Props reference | All 22 props with types, defaults, and descriptions |
+| Code examples | 5 copy-ready snippets covering common use cases |
+| Live demo | QR codes fetched live from api.qrserver.com — hover to see the overlay |
+| Gallery | Regular images from picsum.photos for comparison |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## Running locally
+
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Open `http://localhost:5173`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Building
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run build
 ```
+
+Output goes to `dist/`. The site is automatically deployed to GitHub Pages on every push to `master` via the workflow in `.github/workflows/deploy-demo.yml`.
+
+---
+
+## Related
+
+- **Package repo:** [github.com/opentechcommunity/qr-hover-link](https://github.com/opentechcommunity/qr-hover-link)
+- **npm:** [npmjs.com/package/qr-hover-link](https://www.npmjs.com/package/qr-hover-link)
+- **Live demo:** [opentechcommunity.github.io/qr-hover-demo](https://opentechcommunity.github.io/qr-hover-demo/)
